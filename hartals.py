@@ -4,7 +4,7 @@ def num_hartals(parties, days):
     days_with_hartals = set()
     for day in range(1, days + 1):
         for p in parties:
-            if day == p or day % p == 0:
+           if day % 7 != 6 and day % 7 != 0 and day % p == 0:
                 days_with_hartals.add(day)
     return len(days_with_hartals)
 
