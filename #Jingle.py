@@ -12,16 +12,20 @@ notes = {
 }
 
 def is_one(m):
-    value=0.0
+    value=0
     for x in m:
         value+= notes[x]
     return value==1            
 
-melody = list(sys.stdin.readline().split("/"))
-melody.pop()
-melody.pop(0)
-total=0
-for measure in melody:
-    if(is_one(measure)):
-        total+=1       
-sys.stdout.write("{:}".format(total))        
+
+while True:
+    melody = sys.stdin.readline().strip()
+    if(melody=="*"):
+        break
+    melody= melody[1:-1]    
+    melody = melody.split("/")
+    total=0
+    for measure in melody:
+        if(is_one(measure)):
+            total+=1       
+    sys.stdout.write("{:}".format(total))        
