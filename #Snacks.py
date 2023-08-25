@@ -1,0 +1,13 @@
+#Snacks
+import sys
+table ={
+    1:4.00,
+    2:4.50,
+    3:5.00,
+    4:2.00,
+    5:1.50
+}
+
+x, y = map(int, sys.stdin.readline().split())
+out = table[x]*y
+sys.stdout.write(f"Total: R$ {out}")

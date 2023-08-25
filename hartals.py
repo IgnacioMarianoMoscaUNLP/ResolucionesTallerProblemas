@@ -22,4 +22,4 @@ for _ in range(T):
     cases.append(num_hartals(parties, N))
 
 for i in cases:
-    sys.stdout.write(f"{i}\n")
+   print("{:}\n".format(i))
